@@ -1,6 +1,9 @@
 import React from 'react'
+import { useState } from 'react'
 
 export default function AddCar() {
+    cosnt [brand, setBrand] = useState('')
+
   return (
     <div>
         <h1>Addcar</h1>
@@ -15,7 +18,7 @@ export default function AddCar() {
         </label>
         <label>
             Year:
-            <input type="year" />
+            <input type="number" />
         </label>
         <label>
             HP:
@@ -30,6 +33,7 @@ export default function AddCar() {
             <input type="number" />
         </label>                                
     </form>
+    <button>Add Car</button>
     </div>       
 )
 }
