@@ -12,13 +12,13 @@ export default function AddCar() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setIsPending(true)
+        console.log(brand, model, year, horsepower, fuel, consumption)
 
     }
   return (
     <div>
         <h1>Addcar</h1>
-    <form>
+    <form onSubmit={handleSubmit}> 
         <label>
             Brand:
             <input type="text"
@@ -58,10 +58,10 @@ export default function AddCar() {
             value={consumption}
             onChange={(e) => setConsumption(e.target.value)}
             />
-        </label>                                
+        </label>
+        {!isPending && <button>Add Car</button>}
+        {isPending && <button>loading</button>}                                
     </form>
-    {!isPending && <button onSubmit={handleSubmit}>Add Car</button>}
-    {isPending && <button>loading</button>}
     </div>       
 )
 }
