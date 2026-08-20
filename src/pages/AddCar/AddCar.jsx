@@ -5,7 +5,10 @@ export default function AddCar() {
     <div>
         <h1>Addcar</h1>
     <form>
-        <input type="text">Brand:</input>
+        <label>
+            Brand:
+            <input type="text" />
+        </label>
     </form>
     </div>       
 )
