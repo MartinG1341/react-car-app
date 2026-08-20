@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import styles from './AddCar.module.css'
 
 export default function AddCar() {
     const [brand, setBrand] = useState('')
@@ -10,15 +11,35 @@ export default function AddCar() {
     const [consumption, setConsumption] = useState('')
     const [isPending, setIsPending] = useState(false)
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         console.log(brand, model, year, horsepower, fuel, consumption)
+        const car = {
+            brand,
+            model,
+            year,
+            horsepower,
+            fuel,
+            consumption
+        }
+
+        setIsPending(true)
+
+        await fetch('http://localhost:3001/cars', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(car)
+        })
+
+        setIsPending(false)
 
     }
   return (
-    <div>
+    <div className={styles.page}>
         <h1>Addcar</h1>
-    <form onSubmit={handleSubmit}> 
+    <form onSubmit={handleSubmit} className={styles.form}> 
         <label>
             Brand:
             <input type="text"
@@ -60,7 +81,7 @@ export default function AddCar() {
             />
         </label>
         {!isPending && <button>Add Car</button>}
-        {isPending && <button>loading</button>}                                
+        {isPending && <button>Adding</button>}                                
     </form>
     </div>       
 )

@@ -1,0 +1,14 @@
+{
+  "cars": [
+    {
+      "brand": "bmw",
+      "model": "330",
+      "year": "2000",
+      "horsepower": "231",
+      "fuel": "petrol",
+      "consumption": "14",
+      "id": "bL5zOwaxsgU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
