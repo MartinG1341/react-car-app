@@ -10,6 +10,8 @@ export default function AddCar() {
     const [fuel, setFuel] = useState('')
     const [consumption, setConsumption] = useState('')
     const [isPending, setIsPending] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const [timeout, setTimeout] = useState()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -25,13 +27,26 @@ export default function AddCar() {
 
         setIsPending(true)
 
-        await fetch('http://localhost:3001/cars', {
+        const response = await fetch('http://localhost:3001/cars', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(car)
         })
+        
+        if (response.ok) {
+        setBrand('')
+        setModel('')
+        setYear('')
+        setHorsepower('')
+        setFuel('')
+        setConsumption('')
+        
+        setTimeout(() => {
+            setSuccess(true)
+        }, 4000)
+    }
 
         setIsPending(false)
 
@@ -81,8 +96,11 @@ export default function AddCar() {
             />
         </label>
         {!isPending && <button>Add Car</button>}
-        {isPending && <button>Adding</button>}                                
+        {isPending && <button>Adding</button>}        
+
     </form>
+    {success && 
+    <p className={styles.success}>Car added successfully</p>}
     </div>       
 )
 }

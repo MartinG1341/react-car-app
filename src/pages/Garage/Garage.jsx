@@ -6,7 +6,7 @@ export default function Garage() {
   const [cars, setCars] = useState([])
   useEffect(() => {
     fetch('http://localhost:3001/cars')
-    .then((res) => res.json)
+    .then((res) => res.json())
     .then((data) => {
       setCars(data)
     })
@@ -14,7 +14,7 @@ export default function Garage() {
 
 
   return (
-    <div>
+    <div className={styles.page}>
     <p>Garage</p>
     <h1>{cars.length} car</h1>
     </div>

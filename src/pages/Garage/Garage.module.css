@@ -1,0 +1,16 @@
+.page {
+  min-height: 100vh;
+  background: #0f1115;
+  color: white;
+  padding: 40px 32px;
+}
+
+.page p {
+  color: #b8bec9;
+  margin: 0;
+}
+
+.page h1 {
+  margin-top: 10px;
+  color: white;
+}

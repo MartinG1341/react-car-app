@@ -8,6 +8,15 @@
       "fuel": "petrol",
       "consumption": "14",
       "id": "bL5zOwaxsgU"
+    },
+    {
+      "brand": "merc",
+      "model": "c-class",
+      "year": "2000",
+      "horsepower": "134",
+      "fuel": "pertol",
+      "consumption": "",
+      "id": "oDOZ0rCVBV8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
