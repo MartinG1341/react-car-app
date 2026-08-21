@@ -11,7 +11,6 @@ export default function AddCar() {
     const [consumption, setConsumption] = useState('')
     const [isPending, setIsPending] = useState(false)
     const [success, setSuccess] = useState(false)
-    const [timeout, setTimeout] = useState()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -42,9 +41,10 @@ export default function AddCar() {
         setHorsepower('')
         setFuel('')
         setConsumption('')
+        setSuccess(true)
         
         setTimeout(() => {
-            setSuccess(true)
+            setSuccess(false)
         }, 4000)
     }
 

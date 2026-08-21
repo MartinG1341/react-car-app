@@ -12,11 +12,10 @@ export default function Garage() {
     })
   }, [])
 
-
   return (
     <div className={styles.page}>
     <p>Garage</p>
-    <h1>{cars.length} car</h1>
+    <h1>{cars.length === 0 ? "Don't have cars" : `${cars.lenght} ${cars.lenght === 1 ? 'car' : 'cars'}`} </h1>
     </div>
   )
 }

@@ -17,6 +17,24 @@
       "fuel": "pertol",
       "consumption": "",
       "id": "oDOZ0rCVBV8"
+    },
+    {
+      "brand": "merc",
+      "model": "c-class",
+      "year": "",
+      "horsepower": "",
+      "fuel": "",
+      "consumption": "",
+      "id": "JTDNFHaJweQ"
+    },
+    {
+      "brand": "merc",
+      "model": "",
+      "year": "",
+      "horsepower": "",
+      "fuel": "",
+      "consumption": "",
+      "id": "liN1Md1G5iM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
