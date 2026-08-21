@@ -1,40 +1,13 @@
 {
   "cars": [
     {
-      "brand": "bmw",
+      "brand": "BMW",
       "model": "330",
       "year": "2000",
       "horsepower": "231",
       "fuel": "petrol",
-      "consumption": "14",
-      "id": "bL5zOwaxsgU"
-    },
-    {
-      "brand": "merc",
-      "model": "c-class",
-      "year": "2000",
-      "horsepower": "134",
-      "fuel": "pertol",
-      "consumption": "",
-      "id": "oDOZ0rCVBV8"
-    },
-    {
-      "brand": "merc",
-      "model": "c-class",
-      "year": "",
-      "horsepower": "",
-      "fuel": "",
-      "consumption": "",
-      "id": "JTDNFHaJweQ"
-    },
-    {
-      "brand": "merc",
-      "model": "",
-      "year": "",
-      "horsepower": "",
-      "fuel": "",
-      "consumption": "",
-      "id": "liN1Md1G5iM"
+      "consumption": "13",
+      "id": "IE46bTcMd8E"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
